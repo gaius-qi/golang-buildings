@@ -1,2 +1,2 @@
 # golang-buildings
-Building golang project
+Building golang project.

@@ -34,24 +34,17 @@ changelog:
       - '^test:'
 
 nfpms:
-  - name: hw
-    arch: amd64
-    platform: linux
-    version: v0.1.0
-    prerelease: alpha
-    section: default
-    priority: extra
+  - id: hw
     description: |
       Hello World Package!
     license: "Apache 2.0"
     maintainer: "Gaius <gaius.qi@gmail.com>"
     homepage: https://qiwenbo.com
-
+    formats:
+      - rpm
+      - deb
     replaces:
       - hw
     provides:
       - hw
-
-    contents:
-      - src: ./bin/hw
-        dst: /usr/local/bin/hw
+    bindir: /usr/bin

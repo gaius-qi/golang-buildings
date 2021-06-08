@@ -5,9 +5,9 @@ PROJECTNAME := $(shell basename "$(PWD)")
 
 all: help
 
-build-hw:
+build-hw-linux:
 	@echo "build ${PROJECTNAME}"
-	go build -o bin/hw main.go
+	GOOS=linux GOARCH=amd64 go build -o bin/hw main.go
 
 help: 
 	@echo "make build       		build hw"

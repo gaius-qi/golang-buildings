@@ -44,5 +44,3 @@ nfpms:
     formats:
       - rpm
       - deb
-    replaces:
-      - hw

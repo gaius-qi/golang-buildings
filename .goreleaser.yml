@@ -33,7 +33,7 @@ changelog:
       - '^docs:'
       - '^test:'
 
-nfpm:
+nfpms:
   name: hw
   arch: amd64
   platform: linux

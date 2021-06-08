@@ -5,7 +5,7 @@
 name: hw
 arch: amd64
 platform: linux
-version: v0.1.0
+version: ${VERSION}
 prerelease: alpha
 section: default
 priority: extra
@@ -19,5 +19,5 @@ provides:
   - hw
 
 contents:
-  - src: ./bin/hw
+  - src: /tmp/bin/hw
     dst: /usr/local/bin/hw

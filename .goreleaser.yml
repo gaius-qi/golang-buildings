@@ -45,6 +45,4 @@ nfpms:
       - deb
     replaces:
       - hw
-    provides:
-      - hw
     bindir: /usr/bin

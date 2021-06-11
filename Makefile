@@ -30,6 +30,9 @@ build-deb: bin build-linux
 		--config /tmp/build/package/hw/nfpm.yaml \
 		--target /tmp/bin/$(ARCHIVE_PREFIX)_linux_amd64.deb
 
+changelog:
+	@git-chglog -o CHANGELOG.md
+
 clean:
 	go clean
 	@rm -rf bin

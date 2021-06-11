@@ -18,7 +18,7 @@ build-rpm: bin build-linux
 	-v "$(PWD):/tmp" \
 	-e "VERSION=$(VERSION)" \
 	goreleaser/nfpm pkg \
-		--config /tmp/build/package/nfpm/nfpm.yaml \
+		--config /tmp/build/package/hw/nfpm.yaml \
 		--target /tmp/bin/$(ARCHIVE_PREFIX)_linux_amd64.rpm
 
 build-deb: bin build-linux
@@ -27,10 +27,15 @@ build-deb: bin build-linux
 	-v "$(PWD):/tmp" \
 	-e "VERSION=$(VERSION)" \
 	goreleaser/nfpm pkg \
-		--config /tmp/build/package/nfpm/nfpm.yaml \
+		--config /tmp/build/package/hw/nfpm.yaml \
 		--target /tmp/bin/$(ARCHIVE_PREFIX)_linux_amd64.deb
+
+clean:
+	go clean
+	@rm -rf bin
 
 help: 
 	@echo "make bin       		create bin directory"
 	@echo "make build-linux       		build linux"
 	@echo "make build-rpm       		build rpm"
+	@echo "make build-deb       		build deb"
